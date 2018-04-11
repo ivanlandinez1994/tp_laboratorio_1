@@ -43,13 +43,15 @@ int main()
         switch (operacionARealizar){
         case 1:
             system("cls");
-            printf("\ningrese el primer numero\n");
-            scanf("%d",&numeroUno);
+            if(getInt(&numeroUno, "ingrese el primer operando", "ERROR, el valor ingresado no es valido", 32767, -32768, 3)!=0){
+                printf("ERROR, el valor ingresado no es valido");
+            }
         break;
         case 2:
             system("cls");
-            printf("\ningrese el segundo numero\n");
-            scanf("%d",&numeroDos);
+            if(getInt(&numeroDos, "ingrese el segundo operando", "ERROR, el valor ingresado no es valido", 32767, -32768, 3)!=0){
+                printf("ERROR, el valor ingresado no es valido");
+            }
         break;
         case 3:
             system("cls");

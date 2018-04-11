@@ -26,3 +26,14 @@
 
 1523328373 d:\trabajopracticon1\lib.h
 
+1523415503 source:d:\tp_laboratorio_1\trabajopracticon1\lib.c
+	<stdio.h>
+	<stdlib.h>
+
+1523414841 source:d:\tp_laboratorio_1\trabajopracticon1\main.c
+	<stdio.h>
+	<stdlib.h>
+	"lib.h"
+
+1523414348 d:\tp_laboratorio_1\trabajopracticon1\lib.h
+
