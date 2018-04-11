@@ -11,7 +11,7 @@ int main()
 
     while(operacionARealizar!=9){
 
-        printf("\nelija una opcion del menu:\n");
+        printf("\nElija una opcion del menu:\n");
         printf("1- Ingresar 1er operando (A=%d)\n", numeroUno);
         printf("2- Ingresar 2do operando (B=%d)\n", numeroDos);
         printf("3- Calcular la suma (%d+%d)\n", numeroUno, numeroDos);
@@ -19,9 +19,9 @@ int main()
         printf("5- Calcular la division (%d/%d)\n", numeroUno, numeroDos);
         printf("6- Calcular la multiplicacion (%d*%d)\n", numeroUno, numeroDos);
         printf("7- Calcular el factorial (%d!)\n", numeroUno);
-        printf("8- Calcular todas las operacione\n");
+        printf("8- Calcular todas las operaciones\n");
         printf("9- Salir\n");
-
+        fflush(stdin);
         scanf("%d",&operacionARealizar);
 
         while(operacionARealizar>9 || operacionARealizar<1){
@@ -34,7 +34,7 @@ int main()
             printf("5- Calcular la division (%d/%d)\n", numeroUno, numeroDos);
             printf("6- Calcular la multiplicacion (%d*%d)\n", numeroUno, numeroDos);
             printf("7- Calcular el factorial (%d!)\n", numeroUno);
-            printf("8- Calcular todas las operacione\n");
+            printf("8- Calcular todas las operaciones\n");
             printf("9- Salir\n");
             fflush(stdin);
             scanf("%d",&operacionARealizar);
@@ -138,7 +138,7 @@ int main()
                 printf("%d ! = %.0f\n",numeroUno,resultadoOperacionMain);
             }
             else{
-                printf("ERROR, resultado fuera de rango ingrese un numero mas pequeño para allar su factorial\n");
+                printf("ERROR, resultado fuera de rango ingrese un numero mas pequeño para hallar su factorial\n");
             }
         break;
         case 9:

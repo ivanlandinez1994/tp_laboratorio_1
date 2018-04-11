@@ -26,11 +26,11 @@
 
 1523328373 d:\trabajopracticon1\lib.h
 
-1523415503 source:d:\tp_laboratorio_1\trabajopracticon1\lib.c
+1523452689 source:d:\tp_laboratorio_1\trabajopracticon1\lib.c
 	<stdio.h>
 	<stdlib.h>
 
-1523414841 source:d:\tp_laboratorio_1\trabajopracticon1\main.c
+1523453121 source:d:\tp_laboratorio_1\trabajopracticon1\main.c
 	<stdio.h>
 	<stdlib.h>
 	"lib.h"

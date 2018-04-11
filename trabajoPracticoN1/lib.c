@@ -25,8 +25,9 @@ int getInt(int* resultado, char* mensaje, char* mensajeError, int maximo, int mi
         }
         printf("%s\n", mensajeError);
         printf("el numero ingresado es: %ld\n", auxiliarLongNumeroIngresado);
-        printf("cantidad de intentos restanteses: %d\n", reintentos);
+        printf("cantidad de intentos restantes es: %d\n", reintentos);
         reintentos--;
+        fflush(stdin);
     }while(reintentos>=0);
     return retorno;
 }
