@@ -74,7 +74,10 @@ int main()
         case 5:
             system("cls");
             if(divisionNumeros(numeroUno, numeroDos, &resultadoOperacionMain)==0){
-                printf("\n%d / %d = %.2f\n",numeroUno,numeroDos,resultadoOperacionMain);
+                printf("%d / %d = %.2f\n",numeroUno,numeroDos,resultadoOperacionMain);
+            }
+            else if(divisionNumeros(numeroUno, numeroDos, &resultadoOperacionMain)==-2){
+                printf("el divisior debe ser diferente de 0 para poder llevar a cabo la division\n");
             }
             else{
                 printf("ERROR\n");
@@ -106,12 +109,14 @@ int main()
             else{
                 printf("ERROR\n");
             }
+
             if(restaNumeros(numeroUno, numeroDos, &resultadoOperacionMain)==0){
                 printf("%d - %d = %.0f\n",numeroUno,numeroDos,resultadoOperacionMain);
             }
             else{
                 printf("ERROR\n");
             }
+
             if(divisionNumeros(numeroUno, numeroDos, &resultadoOperacionMain)==0){
                 printf("%d / %d = %.2f\n",numeroUno,numeroDos,resultadoOperacionMain);
             }
@@ -121,12 +126,14 @@ int main()
             else{
                 printf("ERROR\n");
             }
+
             if(multiplicacionNumeros(numeroUno, numeroDos, &resultadoOperacionMain)==0){
                 printf("%d * %d = %.0f\n",numeroUno,numeroDos,resultadoOperacionMain);
             }
             else{
                 printf("ERROR\n");
             }
+
             if(factorialNumero1(numeroUno, &resultadoOperacionMain)==0){
                 printf("%d ! = %.0f\n",numeroUno,resultadoOperacionMain);
             }
