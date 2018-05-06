@@ -47,3 +47,29 @@
 	"trabajoPractico.h"
 	"utn.h"
 
+1525635267 source:d:\tp_laboratorio_1\trabajopracticon2\trabajopractico.c
+	<stdio.h>
+	<stdlib.h>
+	<time.h>
+	<string.h>
+	"trabajoPractico.h"
+	"utn.h"
+
+1525631470 d:\tp_laboratorio_1\trabajopracticon2\trabajopractico.h
+
+1525631470 d:\tp_laboratorio_1\trabajopracticon2\utn.h
+
+1525631470 source:d:\tp_laboratorio_1\trabajopracticon2\utn.c
+	<stdio.h>
+	<stdlib.h>
+	<time.h>
+	<string.h>
+	"utn.h"
+
+1525645298 source:d:\tp_laboratorio_1\trabajopracticon2\main.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"utn.h"
+	"trabajoPractico.h"
+

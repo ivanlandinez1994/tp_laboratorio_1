@@ -7,7 +7,7 @@
 #include <string.h>
 #include "utn.h"
 #include "trabajoPractico.h"
-#define ARRAY_SIZE 4
+#define ARRAY_SIZE 20
 
 int main()
 {
