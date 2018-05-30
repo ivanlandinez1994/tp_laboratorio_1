@@ -4,17 +4,19 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
-
+void mostrar(Movie* array[],int cantidad);
 int main()
 {
-    Movie* arrayPunteroPeliculas[LEN_PELIS];
     int lenPelisActual = 0;
     int lenPelisMaximo = 100;
+    Movie* arrayPunteroPeliculas[lenPelisMaximo];
 
+    peliculas_arrayAdd(arrayPunteroPeliculas,lenPelisMaximo,&lenPelisActual,"fuckers","suspenso","1.30","hahahhah",10,"asdasd",8);
+    mostrar(arrayPunteroPeliculas,lenPelisActual);
     int respuesta;
     do
     {
-        printf("1- Agregar pelicula\n");
+        printf("\n1- Agregar pelicula\n");
         printf("2- Borrar pelicula\n");
         printf("3- Modificar pelicula\n");
         printf("4- Generar pagina web\n");
@@ -35,7 +37,7 @@ int main()
     return 0;
 }
 
-void cargar(Movie** array,int cantidadMaxima,int* cantidadActual)
+/*void cargar(Movie** array,int cantidadMaxima,int* cantidadActual)
 {
     char titulo[50];
     char genero[50];
@@ -59,9 +61,9 @@ void cargar(Movie** array,int cantidadMaxima,int* cantidadActual)
         }while(!feof(archivo));
     }
     fclose(archivo);
-}
+}*/
 
-void mostrar(Alumno* array[],int cantidad)
+void mostrar(Movie* array[],int cantidad)
 {
     int i;
     char titulo[50];
@@ -73,16 +75,19 @@ void mostrar(Alumno* array[],int cantidad)
     int idMovie;
     for(i=0;i<cantidad;i++)
     {
-        alumno_getCuit(array[i],cuit);
-        alumno_getAltura(array[i],&altura);
-        alumno_getId(array[i],&id);
-        alumno_getNombre(array[i],nombre);
-        alumno_getApellido(array[i],apellido);
-        printf("\nCuit:%s - Altura:%f - Nombre: %s - Apellido: %s - Id: %d\n",cuit,altura,nombre,apellido,id);
+        peliculas_getTitulo(array[i],titulo);
+        peliculas_getGenero(array[i],genero);
+        peliculas_getDuracion(array[i],duracion);
+        peliculas_getDescripcion(array[i],descripcion);
+        peliculas_getPuntaje(array[i],&puntaje);
+        peliculas_getLinkImagen(array[i],linkImagen);
+        peliculas_getId(array[i],&idMovie);
+        printf("\nTitulo: %s - Genero: %s - Duracion: %s - Descripcion: %s - Puntaje: %d"
+               " - LinkImagen: %s - IdMovie: %d\n",titulo,genero,duracion,descripcion,puntaje,linkImagen,idMovie);
     }
 }
 
-void modificar(Alumno* array[],int cantidad)
+/*void modificar(Alumno* array[],int cantidad)
 {
     int i;
     Movie* auxiliarMovie;
@@ -94,9 +99,9 @@ void modificar(Alumno* array[],int cantidad)
             alumno_setAltura(auxiliarAlumno,88);
         }
     }
-}
+}*/
 
-int guardarTodo(Alumno* array[],int cantidad)
+/*int guardarTodo(Alumno* array[],int cantidad)
 {
     int retorno=-1;
     int i;
@@ -121,4 +126,4 @@ int guardarTodo(Alumno* array[],int cantidad)
         }
     }
     return retorno;
-}
+}*/

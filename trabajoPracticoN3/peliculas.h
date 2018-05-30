@@ -12,7 +12,7 @@ typedef struct
 }Movie;
 
 Movie* peliculas_new();
-Movie* peliculas_newP( char* genero, char* duracion, char* descripcion, int puntaje,char* linkImagen,int idMovie);
+Movie* peliculas_newP(char* titulo, char* genero, char* duracion, char* descripcion, int puntaje,char* linkImagen,int idMovie);
 void peliculas_delete(Movie* this);
 
 int peliculas_setNewId(Movie* this);
@@ -37,4 +37,6 @@ int peliculas_getPuntaje(Movie* this, int* puntaje);
 int peliculas_setLinkImagen(Movie* this, char* linkImagen);
 int peliculas_getLinkImagen(Movie* this, char* linkImagen);
 
+void peliculas_arrayAdd(Movie** array,int cantidadMaxima,int* cantidadActual,char* titulo, char* genero,
+                         char* duracion, char* descripcion,int puntaje,char* linkImagen,int idMovie);
 #endif // PELICULAS_H_INCLUDED

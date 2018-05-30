@@ -9,11 +9,12 @@ Movie* peliculas_new()
     return malloc(sizeof(Movie));
 }
 
-Movie* peliculas_newP( char* genero, char* duracion, char* descripcion, int puntaje,char* linkImagen,int idMovie)
+Movie* peliculas_newP(char* titulo, char* genero, char* duracion, char* descripcion, int puntaje,char* linkImagen,int idMovie)
 {
     Movie* this = peliculas_new();
 
-    if(     !peliculas_setGenero(this,genero)
+    if(     !peliculas_setTitulo(this,titulo)
+       &&   !peliculas_setGenero(this,genero)
        &&   !peliculas_setDuracion(this,duracion)
        &&   !peliculas_setDescripcion(this,descripcion)
        &&   !peliculas_setPuntaje(this,puntaje)
@@ -79,7 +80,7 @@ int peliculas_getGenero(Movie* this, char* genero)
 int peliculas_setDuracion(Movie* this, char* duracion)
 {
     int retorno = -1;
-    if(this!=NULL && valid_duracion(duracion))
+    if(this!=NULL && duracion!=NULL && valid_string(duracion))
     {
         strcpy(this->duracion,duracion);
         retorno = 0;
@@ -208,10 +209,11 @@ int peliculas_getId(Movie* this, int* id)
     return retorno;
 }
 
-void arrayAlumno_add(Alumno* array[],int cantidadMaxima,int* cantidadActual,char* dni, char* nombre, char* apellido, char* cuit,float altura,int id)
+void peliculas_arrayAdd(Movie** array,int cantidadMaxima,int* cantidadActual,char* titulo, char* genero,
+                         char* duracion, char* descripcion,int puntaje,char* linkImagen,int idMovie)
 {
     //falta validar
-    array[*cantidadActual]  = alumno_newP( dni,nombre,apellido,cuit,altura,id);
+    array[*cantidadActual]  = peliculas_newP(titulo,genero,duracion,descripcion,puntaje,linkImagen,idMovie);
     (*cantidadActual)++;
 }
 

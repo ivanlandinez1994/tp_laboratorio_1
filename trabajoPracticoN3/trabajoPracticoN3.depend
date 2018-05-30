@@ -5,3 +5,28 @@
 
 1527554922 source:d:\trabajopracticon3\peliculas.c
 
+1527707891 source:d:\tp_laboratorio_1\trabajopracticon3\main.c
+	<stdio.h>
+	<stdlib.h>
+	"peliculas.h"
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+
+1527702515 d:\tp_laboratorio_1\trabajopracticon3\peliculas.h
+
+1527706345 source:d:\tp_laboratorio_1\trabajopracticon3\peliculas.c
+	"peliculas.h"
+	"validaciones.h"
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+
+1527703818 d:\tp_laboratorio_1\trabajopracticon3\validaciones.h
+
+1527704016 source:d:\tp_laboratorio_1\trabajopracticon3\validaciones.c
+	"validaciones.h"
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+
