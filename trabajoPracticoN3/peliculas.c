@@ -36,7 +36,7 @@ void peliculas_delete(Movie* this)
 int peliculas_setTitulo(Movie* this, char* titulo)
 {
     int retorno = -1;
-    if(this!=NULL && titulo!=NULL && valid_string(titulo))
+    if(this!=NULL && titulo!=NULL && !valid_string(titulo))
     {
         retorno=0;
         strcpy(this->titulo,titulo);
@@ -58,7 +58,7 @@ int peliculas_getTitulo(Movie* this, char* titulo)
 int peliculas_setGenero(Movie* this, char* genero)
 {
     int retorno = -1;
-    if(this!=NULL && genero!=NULL && valid_string(genero))
+    if(this!=NULL && genero!=NULL && !valid_string(genero))
     {
         retorno=0;
         strcpy(this->genero,genero);
@@ -80,7 +80,7 @@ int peliculas_getGenero(Movie* this, char* genero)
 int peliculas_setDuracion(Movie* this, char* duracion)
 {
     int retorno = -1;
-    if(this!=NULL && duracion!=NULL && valid_string(duracion))
+    if(this!=NULL && duracion!=NULL && !valid_string(duracion))
     {
         strcpy(this->duracion,duracion);
         retorno = 0;
@@ -102,7 +102,7 @@ int peliculas_getDuracion(Movie* this, char* duracion)
 int peliculas_setDescripcion(Movie* this, char* descripcion)
 {
     int retorno = -1;
-    if(this!=NULL && descripcion!=NULL && valid_string(descripcion))
+    if(this!=NULL && descripcion!=NULL && !valid_string(descripcion))
     {
         retorno=0;
         strcpy(this->descripcion,descripcion);
@@ -124,7 +124,7 @@ int peliculas_getDescripcion(Movie* this, char* descripcion)
 int peliculas_setPuntaje(Movie* this, int puntaje)
 {
     int retorno = -1;
-    if(this != NULL && valid_puntaje(puntaje))
+    if(this != NULL && !valid_puntaje(puntaje))
     {
         this->puntaje = puntaje;
         retorno = 0;
@@ -146,7 +146,7 @@ int peliculas_getPuntaje(Movie* this, int* puntaje)
 int peliculas_setLinkImagen(Movie* this, char* linkImagen)
 {
     int retorno = -1;
-    if(this!=NULL && linkImagen!=NULL && valid_string(linkImagen))
+    if(this!=NULL && linkImagen!=NULL && !valid_string(linkImagen))
     {
         retorno=0;
         strcpy(this->linkImagen,linkImagen);
